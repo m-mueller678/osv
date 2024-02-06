@@ -6,7 +6,7 @@ NAME=$1
 qemu-img convert -O raw build/release/usr.img build/release/usr.raw
 echo "Converted to raw image"
 
-snapshot_id=$(python3 ~/projects/flexible-snapshot-proxy/src/main.py upload build/release/usr.raw | tail -n 1)
+snapshot_id=$(python3 -- ~/software/flexible-snapshot-proxy/src/main.py --nodeps upload build/release/usr.raw | tail -n 1)
 echo "Created snapshot: $snapshot_id"
 
 ami_id=$(./scripts/ec2-make-ami.py -n "$NAME" -s "$snapshot_id" | grep '^ami' | tail -n 1)

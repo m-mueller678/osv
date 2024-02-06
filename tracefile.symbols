@@ -1,0 +1,141 @@
+0x40219d31 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<1u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<int, mbuf_slice<128ul> > identity_assign<int, mbuf_slice<128ul> >(int, mbuf_slice<128ul>))>::operator()(int, mbuf_slice<128ul>)::{lambda((anonymous namespace)::tracepointv<1u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<auto:1, auto:1> identity_assign<int, mbuf_slice<128ul> >(auto:1, auto:1))>*, std::tuple<int, mbuf_slice<128ul> >*)#1}::_FUN((anonymous namespace)::tracepointv<1u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<int, mbuf_slice<128ul> > identity_assign<int, mbuf_slice<128ul> >(int, mbuf_slice<128ul>))>*, std::tuple<int, mbuf_slice<128ul> >*)
+0x403b788b arch/x64/arch-trace.hh 42 log_packet_out(mbuf*, int)
+0x4026f34c bsd/sys/net/if_ethersubr.cc 397 ether_output
+0x403aeda2 core/dhcp.cc 113 dhcp::dhcp_interface_state::discover()
+0x403af859 core/dhcp.cc 785 dhcp::dhcp_worker::_send_and_wait(bool, void (dhcp::dhcp_interface_state::*)())
+0x40239ebf loader.cc 538 do_main_thread(void*)
+0x403f07d9 libc/pthread.cc 116 std::_Function_handler<void (), pthread_private::pthread::pthread(void* (*)(void*), void*, sigset_t, pthread_private::thread_attr const*)::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+0x403891dd core/sched.cc 1415 thread_main_c
+0x40315f51 arch/x64/entry.S 161 thread_main
+0x40219c64 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<0u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<int, mbuf_slice<128ul> > identity_assign<int, mbuf_slice<128ul> >(int, mbuf_slice<128ul>))>::operator()(int, mbuf_slice<128ul>)::{lambda((anonymous namespace)::tracepointv<0u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<auto:1, auto:1> identity_assign<int, mbuf_slice<128ul> >(auto:1, auto:1))>*, std::tuple<int, mbuf_slice<128ul> >*)#1}::_FUN((anonymous namespace)::tracepointv<0u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<int, mbuf_slice<128ul> > identity_assign<int, mbuf_slice<128ul> >(int, mbuf_slice<128ul>))>*, std::tuple<int, mbuf_slice<128ul> >*)
+0x403b783b arch/x64/arch-trace.hh 42 log_packet_in(mbuf*, int)
+0x40278717 bsd/sys/net/netisr.cc 768 netisr_dispatch_src
+0x402f52c2 drivers/virtio-net.cc 544 virtio::net::receiver()
+0x402f55ff drivers/virtio-net.cc 243 std::_Function_handler<void (), virtio::net::net(virtio::virtio_device&)::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+0x40278722 bsd/sys/net/netisr.cc 769 netisr_dispatch_src
+0x403af653 core/dhcp.cc 113 dhcp::dhcp_interface_state::state_discover(dhcp::dhcp_mbuf&)
+0x403b15ce core/dhcp.cc 630 dhcp::dhcp_interface_state::process_packet(mbuf*)
+0x403b174b core/dhcp.cc 843 dhcp::dhcp_worker::dhcp_worker_fn()
+0x403b17df core/dhcp.cc 773 std::_Function_handler<void (), dhcp::dhcp_worker::init()::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+0x4026acd5 bsd/sys/netinet/if_ether.cc 240 arprequest(ifnet*, in_addr*, in_addr*, unsigned char*)
+0x4026b654 bsd/sys/netinet/if_ether.cc 868 arp_ifinit
+0x4026fa7c bsd/sys/net/if_ethersubr.cc 1048 ether_ioctl
+0x40280d6a bsd/sys/netinet/in.cc 859 in_ifinit(ifnet*, in_ifaddr*, bsd_sockaddr_in*, int)
+0x402822c0 bsd/sys/netinet/in.cc 547 in_control
+0x40264de0 bsd/porting/networking.cc 113 osv::start_if(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0x403b0367 core/dhcp.cc 695 dhcp::dhcp_interface_state::state_request(dhcp::dhcp_mbuf&)
+0x402043a4 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<0u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<void*, unsigned int> identity_assign<void*, unsigned int>(void*, unsigned int))>::operator()(void*, unsigned int)::{lambda((anonymous namespace)::tracepointv<0u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<auto:1, auto:1> identity_assign<void*, unsigned int>(auto:1, auto:1))>*, std::tuple<void*, unsigned int>*)#1}::_FUN((anonymous namespace)::tracepointv<0u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<void*, unsigned int> identity_assign<void*, unsigned int>(void*, unsigned int))>*, std::tuple<void*, unsigned int>*)
+0x40280407 arch/x64/arch-trace.hh 42 in_lltable_lookup(lltable*, unsigned int, bsd_sockaddr const*)
+0x4026b67c ./bsd/sys/net/if_llatbl.h 219 arp_ifinit
+0x403b15e6 core/dhcp.cc 633 dhcp::dhcp_interface_state::process_packet(mbuf*)
+0x40277660 bsd/sys/net/netisr.cc 633 netisr_queue_workstream(netisr_workstream*, unsigned int, netisr_work*, mbuf*, int*) [clone .constprop.0]
+0x402785ac bsd/sys/net/netisr.cc 684 netisr_queue_src
+0x40275920 bsd/sys/net/rtsock.cc 761 route_output(mbuf*, socket*)
+0x4025832d bsd/sys/kern/uipc_socket.cc 1075 sosend_generic
+0x4026462d bsd/porting/route.cc 339 osv_route_add_network
+0x403b0402 /usr/include/c++/11/bits/basic_string.h 194 dhcp::dhcp_interface_state::state_request(dhcp::dhcp_mbuf&)
+0x40219dfe include/osv/trace.hh 350 (anonymous namespace)::tracepointv<2u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<int, mbuf_slice<128ul> > identity_assign<int, mbuf_slice<128ul> >(int, mbuf_slice<128ul>))>::operator()(int, mbuf_slice<128ul>)::{lambda((anonymous namespace)::tracepointv<2u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<auto:1, auto:1> identity_assign<int, mbuf_slice<128ul> >(auto:1, auto:1))>*, std::tuple<int, mbuf_slice<128ul> >*)#1}::_FUN((anonymous namespace)::tracepointv<2u, std::tuple<int, mbuf_slice<128ul> > (int, mbuf_slice<128ul>), &(std::tuple<int, mbuf_slice<128ul> > identity_assign<int, mbuf_slice<128ul> >(int, mbuf_slice<128ul>))>*, std::tuple<int, mbuf_slice<128ul> >*)
+0x403b78db arch/x64/arch-trace.hh 42 log_packet_handling(mbuf*, int)
+0x40277848 bsd/sys/net/netisr.cc 575 swi_net(void*)
+0x40278acb bsd/sys/net/netisr1.cc 29 netisr_osv_thread_wrapper(void (*)(void*), void*)
+0x40278b33 bsd/sys/net/netisr1.cc 39 std::_Function_handler<void (), netisr_osv_start_thread::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+0x402053ec include/osv/trace.hh 350 (anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<tcpcb*, int, int> identity_assign<tcpcb*, int, int>(tcpcb*, int, int))>::operator()(tcpcb*, int, int)::{lambda((anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<auto:1, auto:1, auto:1> identity_assign<tcpcb*, int, int>(auto:1, auto:1, auto:1))>*, std::tuple<tcpcb*, int, int>*)#1}::_FUN((anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<tcpcb*, int, int> identity_assign<tcpcb*, int, int>(tcpcb*, int, int))>*, std::tuple<tcpcb*, int, int>*)
+0x402a64c9 arch/x64/arch-trace.hh 37 tcp_usr_attach(socket*, int, thread*)
+0x40256d3d bsd/sys/kern/uipc_socket.cc 335 socreate
+0x4025d682 bsd/sys/kern/uipc_syscalls.cc 118 socreate(int, int, int)
+0x4025d6c0 bsd/sys/kern/uipc_syscalls.cc 133 sys_socket
+0x4026bcc5 bsd/sys/compat/linux/linux_socket.cc 616 linux_socket
+0x4025faf5 bsd/sys/kern/uipc_syscalls_wrap.cc 333 socket
+0x100000168b6c None <?> No symbol matches 0x100000168b6c.
+0x402a6655 arch/x64/arch-trace.hh 37 tcp_usr_listen(socket*, int, thread*)
+0x4025d916 bsd/sys/kern/uipc_syscalls.cc 185 sys_listen
+0x4025f832 bsd/sys/kern/uipc_syscalls_wrap.cc 145 listen
+0x100000165dbd None <?> No symbol matches 0x100000165dbd.
+0x40204495 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<1u, std::tuple<inpcb*> (inpcb*), &(std::tuple<inpcb*> identity_assign<inpcb*>(inpcb*))>::operator()(inpcb*)::{lambda((anonymous namespace)::tracepointv<1u, std::tuple<inpcb*> (inpcb*), &(std::tuple<auto:1> identity_assign<inpcb*>(auto:1))>*, std::tuple<inpcb*>*)#1}::_FUN((anonymous namespace)::tracepointv<1u, std::tuple<inpcb*> (inpcb*), &(std::tuple<inpcb*> identity_assign<inpcb*>(inpcb*))>*, std::tuple<inpcb*>*)
+0x40283ca4 arch/x64/arch-trace.hh 42 in_pcbref
+0x40283f44 bsd/sys/netinet/in_pcb.cc 1748 in_pcblookup_hash(inpcbinfo*, in_addr, unsigned int, in_addr, unsigned int, int, ifnet*)
+0x4029aa77 bsd/sys/netinet/tcp_input.cc 578 tcp_input
+0x4028ce6d bsd/sys/netinet/ip_input.cc 774 ip_input
+0x40204540 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<2u, std::tuple<inpcb*> (inpcb*), &(std::tuple<inpcb*> identity_assign<inpcb*>(inpcb*))>::operator()(inpcb*)::{lambda((anonymous namespace)::tracepointv<2u, std::tuple<inpcb*> (inpcb*), &(std::tuple<auto:1> identity_assign<inpcb*>(auto:1))>*, std::tuple<inpcb*>*)#1}::_FUN((anonymous namespace)::tracepointv<2u, std::tuple<inpcb*> (inpcb*), &(std::tuple<inpcb*> identity_assign<inpcb*>(inpcb*))>*, std::tuple<inpcb*>*)
+0x40283ddc arch/x64/arch-trace.hh 42 in_pcbrele_locked
+0x40283f66 bsd/sys/netinet/in_pcb.cc 1752 in_pcblookup_hash(inpcbinfo*, in_addr, unsigned int, in_addr, unsigned int, int, ifnet*)
+0x402042d4 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<1u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<void*, unsigned int> identity_assign<void*, unsigned int>(void*, unsigned int))>::operator()(void*, unsigned int)::{lambda((anonymous namespace)::tracepointv<1u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<auto:1, auto:1> identity_assign<void*, unsigned int>(auto:1, auto:1))>*, std::tuple<void*, unsigned int>*)#1}::_FUN((anonymous namespace)::tracepointv<1u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<void*, unsigned int> identity_assign<void*, unsigned int>(void*, unsigned int))>*, std::tuple<void*, unsigned int>*)
+0x402800db arch/x64/arch-trace.hh 42 in_lltable_lookup_fast(lltable*, unsigned int, bsd_sockaddr const*, arp_cache::mac_address&, unsigned short&)
+0x4026af5c ./bsd/sys/net/if_llatbl.h 226 arpresolve
+0x4026f1be bsd/sys/net/if_ethersubr.cc 183 ether_output
+0x4028dd77 bsd/sys/netinet/ip_output.cc 621 ip_output(mbuf*, mbuf*, route*, int, ip_moptions*, inpcb*)
+0x402a20f7 bsd/sys/netinet/tcp_syncache.cc 1416 syncache_respond(syncache*)
+0x402a2ef7 bsd/sys/netinet/tcp_syncache.cc 1227 _syncache_add(in_conninfo*, tcpopt*, tcphdr*, inpcb*, socket**, mbuf*, toe_usrreqs*, void*) [clone .constprop.0]
+0x4029b5a8 bsd/sys/netinet/tcp_input.cc 941 tcp_input
+0x4026af88 ./bsd/sys/net/if_llatbl.h 219 arpresolve
+0x4026b04e ./bsd/sys/net/if_llatbl.h 219 arpresolve
+0x4026b365 bsd/sys/netinet/if_ether.cc 403 arpresolve
+0x40269e65 ./bsd/sys/net/if_llatbl.h 219 arpintr(mbuf*)
+0x4026a617 bsd/sys/netinet/if_ether.cc 749 arpintr(mbuf*)
+0x40257474 bsd/sys/kern/uipc_socket.cc 396 sonewconn
+0x402a35a8 bsd/sys/netinet/tcp_syncache.cc 599 syncache_expand
+0x4029b1dd bsd/sys/netinet/tcp_input.cc 765 tcp_input
+0x40204fea include/osv/trace.hh 350 (anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<tcpcb*, int, int> identity_assign<tcpcb*, int, int>(tcpcb*, int, int))>::operator()(tcpcb*, int, int)::{lambda((anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<auto:1, auto:1, auto:1> identity_assign<tcpcb*, int, int>(auto:1, auto:1, auto:1))>*, std::tuple<tcpcb*, int, int>*)#1}::_FUN((anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<tcpcb*, int, int> identity_assign<tcpcb*, int, int>(tcpcb*, int, int))>*, std::tuple<tcpcb*, int, int>*)
+0x402a399e arch/x64/arch-trace.hh 37 syncache_expand
+0x40204786 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<tcpcb*, int, int> identity_assign<tcpcb*, int, int>(tcpcb*, int, int))>::operator()(tcpcb*, int, int)::{lambda((anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<auto:1, auto:1, auto:1> identity_assign<tcpcb*, int, int>(auto:1, auto:1, auto:1))>*, std::tuple<tcpcb*, int, int>*)#1}::_FUN((anonymous namespace)::tracepointv<0u, std::tuple<tcpcb*, int, int> (tcpcb*, int, int), &(std::tuple<tcpcb*, int, int> identity_assign<tcpcb*, int, int>(tcpcb*, int, int))>*, std::tuple<tcpcb*, int, int>*)
+0x40299bc1 arch/x64/arch-trace.hh 37 tcp_do_segment(mbuf*, tcphdr*, socket*, tcpcb*, int, int, unsigned char, int, bool&)
+0x4029b2a2 bsd/sys/netinet/tcp_input.cc 817 tcp_input
+0x402048bc include/osv/trace.hh 350 (anonymous namespace)::tracepointv<8u, std::tuple<void*> (void*), &(std::tuple<void*> identity_assign<void*>(void*))>::operator()(void*)::{lambda((anonymous namespace)::tracepointv<8u, std::tuple<void*> (void*), &(std::tuple<auto:1> identity_assign<void*>(auto:1))>*, std::tuple<void*>*)#1}::_FUN((anonymous namespace)::tracepointv<8u, std::tuple<void*> (void*), &(std::tuple<void*> identity_assign<void*>(void*))>*, std::tuple<void*>*)
+0x4029e014 arch/x64/arch-trace.hh 42 tcp_output
+0x40298af5 bsd/sys/netinet/tcp_input.cc 1421 tcp_do_segment(mbuf*, tcphdr*, socket*, tcpcb*, int, int, unsigned char, int, bool&)
+0x40204a12 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<9u, std::tuple<int> (int), &(std::tuple<int> identity_assign<int>(int))>::operator()(int)::{lambda((anonymous namespace)::tracepointv<9u, std::tuple<int> (int), &(std::tuple<auto:1> identity_assign<int>(auto:1))>*, std::tuple<int>*)#1}::_FUN((anonymous namespace)::tracepointv<9u, std::tuple<int> (int), &(std::tuple<int> identity_assign<int>(int))>*, std::tuple<int>*)
+0x4029e0f7 arch/x64/arch-trace.hh 42 tcp_output
+0x40204c64 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<10u, std::tuple<int, int, int, int, int, int> (int, int, int, int, int, int), &(std::tuple<int, int, int, int, int, int> identity_assign<int, int, int, int, int, int>(int, int, int, int, int, int))>::operator()(int, int, int, int, int, int)::{lambda((anonymous namespace)::tracepointv<10u, std::tuple<int, int, int, int, int, int> (int, int, int, int, int, int), &(std::tuple<auto:1, auto:1, auto:1, auto:1, auto:1, auto:1> identity_assign<int, int, int, int, int, int>(auto:1, auto:1, auto:1, auto:1, auto:1, auto:1))>*, std::tuple<int, int, int, int, int, int>*)#1}::_FUN((anonymous namespace)::tracepointv<10u, std::tuple<int, int, int, int, int, int> (int, int, int, int, int, int), &(std::tuple<int, int, int, int, int, int> identity_assign<int, int, int, int, int, int>(int, int, int, int, int, int))>*, std::tuple<int, int, int, int, int, int>*)
+0x4029edad arch/x64/arch-trace.hh 37 tcp_output
+0x403b372a core/net_channel.cc 139 classifier::post_packet(mbuf*)
+0x402f52ab drivers/virtio-net.cc 542 virtio::net::receiver()
+0x4029b75b bsd/sys/netinet/tcp_input.cc 3193 std::_Function_handler<void (mbuf*), tcp_setup_net_channel::{lambda(mbuf*)#1}>::_M_invoke(std::_Any_data const&, mbuf*&&)
+0x403b33f6 /usr/include/c++/11/bits/std_function.h 590 net_channel::process_queue()
+0x402631e1 bsd/sys/kern/sys_socket.cc 260 socket_file::poll(int)
+0x403ab5de core/epoll.cc 99 epoll_ctl
+0x10000016010c None <?> No symbol matches 0x10000016010c.
+0x10000015d1af None <?> No symbol matches 0x10000015d1af.
+0x402046bd include/osv/trace.hh 350 (anonymous namespace)::tracepointv<1u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<void*, unsigned int> identity_assign<void*, unsigned int>(void*, unsigned int))>::operator()(void*, unsigned int)::{lambda((anonymous namespace)::tracepointv<1u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<auto:1, auto:1> identity_assign<void*, unsigned int>(auto:1, auto:1))>*, std::tuple<void*, unsigned int>*)#1}::_FUN((anonymous namespace)::tracepointv<1u, std::tuple<void*, unsigned int> (void*, unsigned int), &(std::tuple<void*, unsigned int> identity_assign<void*, unsigned int>(void*, unsigned int))>*, std::tuple<void*, unsigned int>*)
+0x4029b88f arch/x64/arch-trace.hh 37 std::_Function_handler<void (mbuf*), tcp_setup_net_channel::{lambda(mbuf*)#1}>::_M_invoke(std::_Any_data const&, mbuf*&&)
+0x402a61ae bsd/sys/netinet/tcp_usrreq.cc 736 tcp_usr_rcvd(socket*, int)
+0x40259159 bsd/sys/kern/uipc_socket.cc 1791 soreceive_generic
+0x4025e558 bsd/sys/kern/uipc_syscalls.cc 607 kern_recvit
+0x4025e8bb bsd/sys/kern/uipc_syscalls.cc 673 sys_recvfrom
+0x4026c132 bsd/sys/compat/linux/linux_socket.cc 866 linux_recv
+0x4025f8c5 bsd/sys/kern/uipc_syscalls_wrap.cc 183 recv
+0x10000015b501 None <?> No symbol matches 0x10000015b501.
+0x10000016193f None <?> No symbol matches 0x10000016193f.
+0x402a72a7 bsd/sys/netinet/tcp_usrreq.cc 832 tcp_usr_send(socket*, int, mbuf*, bsd_sockaddr*, mbuf*, thread*)
+0x4025e312 bsd/sys/kern/uipc_syscalls.cc 515 kern_sendit
+0x4025f9d5 bsd/sys/kern/uipc_syscalls_wrap.cc 257 sendmsg
+0x10000015b1d5 None <?> No symbol matches 0x10000015b1d5.
+0x100000162dbf None <?> No symbol matches 0x100000162dbf.
+0x40204b83 include/osv/trace.hh 350 (anonymous namespace)::tracepointv<4u, std::tuple<int, int, int, int, unsigned int> (int, int, int, int, unsigned int), &(std::tuple<int, int, int, int, unsigned int> identity_assign<int, int, int, int, unsigned int>(int, int, int, int, unsigned int))>::operator()(int, int, int, int, unsigned int)::{lambda((anonymous namespace)::tracepointv<4u, std::tuple<int, int, int, int, unsigned int> (int, int, int, int, unsigned int), &(std::tuple<auto:1, auto:1, auto:1, auto:1, auto:1> identity_assign<int, int, int, int, unsigned int>(auto:1, auto:1, auto:1, auto:1, auto:1))>*, std::tuple<int, int, int, int, unsigned int>*)#1}::_FUN((anonymous namespace)::tracepointv<4u, std::tuple<int, int, int, int, unsigned int> (int, int, int, int, unsigned int), &(std::tuple<int, int, int, int, unsigned int> identity_assign<int, int, int, int, unsigned int>(int, int, int, int, unsigned int))>*, std::tuple<int, int, int, int, unsigned int>*)
+0x4029de16 arch/x64/arch-trace.hh 37 tcp_output
+0x4029d619 bsd/sys/netinet/tcp_output.cc 1385 tcp_output
+0x4029e8c7 arch/x64/arch-trace.hh 42 tcp_output
+0x402a6bc2 arch/x64/arch-trace.hh 37 tcp_usrclosed(tcpcb*)
+0x402a6c8a bsd/sys/netinet/tcp_usrreq.cc 704 tcp_usr_shutdown(socket*)
+0x4025e944 bsd/sys/kern/uipc_syscalls.cc 733 sys_shutdown
+0x4025fac2 bsd/sys/kern/uipc_syscalls_wrap.cc 316 shutdown
+0x10000015e9d3 None <?> No symbol matches 0x10000015e9d3.
+0x402a6cbf bsd/sys/netinet/tcp_usrreq.cc 706 tcp_usr_shutdown(socket*)
+0x402a6fab bsd/sys/netinet/tcp_usrreq.cc 574 tcp_usr_disconnect(socket*)
+0x4025793e bsd/sys/kern/uipc_socket.cc 777 soclose
+0x403cac3b fs/vfs/kern_descrip.cc 219 fdrop.part
+0x403cad67 fs/vfs/kern_descrip.cc 98 fdclose(int)
+0x403c3c2e fs/vfs/main.cc 269 close
+0x100000157cae None <?> No symbol matches 0x100000157cae.
+0x402a6eb3 bsd/sys/netinet/tcp_usrreq.cc 954 tcp_usr_close(socket*)
+0x40257695 bsd/sys/kern/uipc_socket.cc 636 soclose
+0x4029b0e5 bsd/sys/netinet/tcp_input.cc 956 tcp_input
+0x4029e25f arch/x64/arch-trace.hh 42 tcp_output
+0x4029e2a7 arch/x64/arch-trace.hh 42 tcp_output
+0x40299cc5 arch/x64/arch-trace.hh 37 tcp_do_segment(mbuf*, tcphdr*, socket*, tcpcb*, int, int, unsigned char, int, bool&)
+0x402a12a4 bsd/sys/netinet/tcp_subr.cc 891 tcp_discardcb
+0x402a5a19 bsd/sys/netinet/tcp_timewait.cc 274 tcp_twstart
+0x4029928a bsd/sys/netinet/tcp_input.cc 2511 tcp_do_segment(mbuf*, tcphdr*, socket*, tcpcb*, int, int, unsigned char, int, bool&)
+0x402a5739 bsd/sys/netinet/tcp_timewait.cc 553 tcp_twrespond
+0x402a5b5c bsd/sys/netinet/tcp_timewait.cc 281 tcp_twstart
+0x402a05b1 bsd/sys/netinet/tcp_subr.cc 901 std::_Function_handler<void (), tcp_discardcb::{lambda()#1}>::_M_invoke(std::_Any_data const&)
+0x403b6fb6 /usr/include/c++/11/bits/std_function.h 590 async::async_worker::run()
