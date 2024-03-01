@@ -276,8 +276,7 @@ def start_osv_qemu(options):
 
     virtiofsd = None
     if options.virtio_fs_dir:
-        virtiofsd_cmdline = ["virtiofsd", "--socket-path=/tmp/vhostqemu", "-o",
-            "source=%s" % options.virtio_fs_dir]
+        virtiofsd_cmdline = ["virtiofsd", "--socket-path=/tmp/vhostqemu", "--shared-dir",options.virtio_fs_dir,"--sandbox","none","--cache","never"]
         if options.dry_run:
             print(format_args(virtiofsd_cmdline))
         else:
