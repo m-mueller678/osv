@@ -17,6 +17,8 @@
 #include <osv/trace.hh>
 #include <memory>
 
+extern "C" void flush_tlb_all_extern();
+
 #include <syscall.h>
 #include <stdarg.h>
 #include <errno.h>
@@ -973,6 +975,9 @@ OSV_LIBC_API long syscall(long number, ...)
     SYSCALL2(getpriority, int, int);
     SYSCALL3(setpriority, int, int, int);
     SYSCALL4(ppoll, struct pollfd *, nfds_t, const struct timespec *, const sigset_t *);
+
+
+            case (0x1000): do { flush_tlb_all_extern(); return 0; } while (0);
     }
 
     debug_always("syscall(): unimplemented system call %d\n", number);
