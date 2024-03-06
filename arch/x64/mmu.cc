@@ -196,3 +196,7 @@ bool fast_sigsegv_check(uintptr_t addr, exception_frame* ef)
 // data and instruction caches. Therefore we do not need to do anything as they are always in sync.
 void synchronize_cpu_caches(void *v, size_t size) {}
 }
+
+extern "C" void flush_tlb_all_extern(){
+    mmu::flush_tlb_all();
+}

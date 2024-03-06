@@ -1528,6 +1528,9 @@ void l2::refill()
             auto total_size = 0;
             for (size_t i = 0 ; i < page_batch::nr_pages; i++) {
                 batch.pages[i] = free_page_ranges.alloc(page_size);
+                if (!batch.pages[i]){
+                    abort();
+                }
                 total_size += page_size;
             }
             on_alloc(total_size);
