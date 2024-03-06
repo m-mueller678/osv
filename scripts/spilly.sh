@@ -37,11 +37,14 @@ for arg in "$@"; do
     esac
 done
 
+sed '/^[^;].*;;_DEBUG_MODE-/ s:^:;;DEBUG_MODE:' -i apps/spilly/spilly/compiler.lisp
+sed '/;;_DEBUG_MODE-'$release_debug'/ s:;;DEBUG_MODE::g' -i apps/spilly/spilly/compiler.lisp
+
 ./scripts/build mode=$release_debug fs=virtiofs export=all image=spilly -j$(nproc) app_local_exec_tls_size=5000
 mkdir build/export/disks/ -p
-ln ../spilly/disks/disk1 build/export/disks/disk1 -f
-ln ../spilly/disks/disk2 build/export/disks/disk2 -f
-ln ../spilly/db.bin build/export/db.bin -f
+ln apps/spilly/disks/disk1 build/export/disks/disk1 -f
+ln apps/spilly/disks/disk2 build/export/disks/disk2 -f
+ln apps/spilly/db.bin build/export/db.bin -f
 
 echo "gdb build/$release_debug/loader.elf -q -ex 'set pagination off' -ex 'connect' -ex 'hb run_main' -ex c -ex 'd 1' -ex 'osv syms -q' -ex 'hb rust_panic'"
 
