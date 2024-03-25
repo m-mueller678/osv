@@ -135,7 +135,7 @@ void arch_setup_free_memory()
     auto c = processor::cpuid(0x80000000);
     if (c.a >= 0x80000008) {
         c = processor::cpuid(0x80000008);
-        mmu::phys_bits = c.a & 0xff;
+        mmu::phys_bits = 48;
         mmu::virt_bits = (c.a >> 8) & 0xff;
         assert(mmu::phys_bits <= mmu::max_phys_bits);
     }
