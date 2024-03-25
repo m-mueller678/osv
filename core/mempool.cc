@@ -31,11 +31,15 @@
 #include <osv/shrinker.h>
 #include <osv/defer.hh>
 #include <osv/dbg-alloc.hh>
+#include <osv/migration-lock.hh>
+#include <osv/export.h>
+
+// recent Boost gets confused by the "hidden" macro we add in some Musl
+// header files, so need to undefine it
+#undef hidden
 #include <boost/dynamic_bitset.hpp>
 #include <boost/lockfree/stack.hpp>
 #include <boost/lockfree/policies.hpp>
-#include <osv/migration-lock.hh>
-#include <osv/export.h>
 
 TRACEPOINT(trace_memory_malloc, "buf=%p, len=%d, align=%d", void *, size_t,
            size_t);
@@ -2179,4 +2183,14 @@ bool throttling_needed()
 }
 
 jvm_balloon_api *balloon_api = nullptr;
+}
+
+extern "C" void* alloc_contiguous_aligned(size_t size, size_t align)
+{
+    return memory::alloc_phys_contiguous_aligned(size, align, true);
+}
+
+extern "C" void free_contiguous_aligned(void* p)
+{
+    memory::free_phys_contiguous_aligned(p);
 }
