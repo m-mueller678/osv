@@ -84,4 +84,5 @@ __sysconf = sysconf;
    issue #1299.
 */
 __isoc23_strtoul = strtoul;
+__isoc23_strtoll = strtoll;
 __isoc23_sscanf = sscanf;
