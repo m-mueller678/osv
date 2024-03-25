@@ -53,4 +53,4 @@ ln apps/spilly/db.bin build/export/db.bin -f
 
 echo "gdb build/$release_debug/loader.elf -q -ex 'set pagination off' -ex 'connect' -ex 'hb run_main' -ex c -ex 'd 1' -ex 'osv syms -q' -ex 'hb rust_panic'"
 
-./scripts/run.py -m "$MEM"G $cpus -e $threads' --power-off-on-abort '"$jemalloc_log"' --env=PERF_REPEAT='$REP' /spilly/'$ALLOC'/bench-oom:'$QUERY'.out /db.bin:tpch-'$SF --virtio-fs-tag=myfs --virtio-fs-dir=build/export $wait $dryrun
+./scripts/run.py -m "$MEM"G $cpus -e $threads' --power-off-on-abort '"$jemalloc_log"' --env=PERF_REPEAT='$REP' --env=LIBDB_OVERRIDE_IO_RO=1 /spilly/'$ALLOC'/bench-oom:'$QUERY'.out /db.bin:tpch-'$SF --virtio-fs-tag=myfs --virtio-fs-dir=build/export $wait $dryrun
