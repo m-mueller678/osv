@@ -487,7 +487,7 @@ void cpu::do_idle()
             return;
         }
         guard.release();
-        arch::wait_for_interrupt(); // this unlocks irq_lock
+        arch::irq_enable();
         handle_incoming_wakeups();
     } while (runqueue.empty());
 }
