@@ -84,6 +84,7 @@ static void print_backtrace(void)
 
     debug_ll("\n[backtrace]\n");
 
+    return;
     len = backtrace_safe(addrs, 128);
 
     /* Start with i=1 to skip abort(const char *)  */
