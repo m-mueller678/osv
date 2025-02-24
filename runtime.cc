@@ -117,7 +117,6 @@ void abort(const char *fmt, ...)
 #if CONF_lazy_stack
     sched::ensure_next_stack_page_if_preemptable();
 #endif
-    arch::irq_disable();
 
     static char msg[1024];
     va_list ap;
@@ -125,6 +124,8 @@ void abort(const char *fmt, ...)
     va_start(ap, fmt);
     vsnprintf(msg, sizeof(msg), fmt, ap);
     va_end(ap);
+
+    arch::irq_disable();
 
     debug_early(msg);
     // backtrace requires threads to be available, and also
